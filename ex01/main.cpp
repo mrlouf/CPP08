@@ -6,11 +6,10 @@
 /*   By: nponchon <nponchon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 12:44:42 by nponchon          #+#    #+#             */
-/*   Updated: 2025/03/18 16:59:39 by nponchon         ###   ########.fr       */
+/*   Updated: 2025/03/18 17:20:01 by nponchon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include "Span.hpp"
 
 int main()
@@ -66,6 +65,20 @@ int main()
 			Span sp = Span(1);
 
 			sp.addNumber(6);
+
+			std::cout << sp.shortestSpan() << std::endl;
+			std::cout << sp.longestSpan() << std::endl;
+		}
+		catch (const std::exception &e) {
+			std::cerr << e.what() << std::endl;
+		}
+	}
+	{
+		std::cout << std::endl << "\033[31mTest with 10 000 numbers\033[0m" << std::endl;
+		try {
+			Span sp = Span(10000);
+
+			sp.addMore(10000);
 
 			std::cout << sp.shortestSpan() << std::endl;
 			std::cout << sp.longestSpan() << std::endl;

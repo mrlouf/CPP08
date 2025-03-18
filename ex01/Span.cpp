@@ -6,7 +6,7 @@
 /*   By: nponchon <nponchon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 12:44:46 by nponchon          #+#    #+#             */
-/*   Updated: 2025/03/18 17:01:17 by nponchon         ###   ########.fr       */
+/*   Updated: 2025/03/18 17:30:07 by nponchon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,4 +61,31 @@ unsigned int Span::longestSpan() const {
 	int max = *std::max_element(_vector.begin(), _vector.end());
 
 	return max - min;
+}
+
+void Span::addMore(const unsigned int i) {
+	try {
+		for (unsigned int j = 0; j < i; j++) {
+
+			std::ifstream urandom("/dev/urandom", std::ios::binary);
+            if (!urandom) {
+                throw std::runtime_error("Unable to open /dev/urandom");
+            }
+
+            unsigned int seed;
+            urandom.read(reinterpret_cast<char*>(&seed), sizeof(seed));
+            if (!urandom) {
+                throw std::runtime_error("Failed to read from /dev/urandom");
+            }
+            
+			srand(seed);
+
+            urandom.close();
+			int random = rand() % INT_MAX;
+			addNumber(random);
+		}
+	}
+	catch (const std::exception &e) {
+		std::cout << e.what() << std::endl;
+	}
 }

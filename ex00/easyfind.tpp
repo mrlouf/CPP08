@@ -6,27 +6,23 @@
 /*   By: nponchon <nponchon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 17:37:50 by nponchon          #+#    #+#             */
-/*   Updated: 2025/03/12 19:14:11 by nponchon         ###   ########.fr       */
+/*   Updated: 2025/03/18 12:34:35 by nponchon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-
-#include <vector>
+#include <iostream>
+#include <iterator>
 #include <algorithm>
 #include "easyfind.hpp"
 
 template <typename T>
-T easyfind(std::vector<T> &v, const int i)
+typename T::iterator easyfind(T &v, const int i)
 {
-	for (size_t j = 0; j < v.size(); ++j) {
-		if (v[j] == i)
-			return v[j];
+	typename T::iterator it = v.begin();
+	typename T::iterator end = v.end();
+	for (; it != end; it++) {
+		if (*it == i)
+			return it;
 	}
-	throw ElementNotFoundException();
-	return 0;
-}
-
-const char* ElementNotFoundException::what() const throw() {
-	return "element not found in container";
+	throw std::runtime_error("Element not found");
 }

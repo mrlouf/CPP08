@@ -5,7 +5,7 @@ NAME 		= easyfind
 # -=-=-=-=-    FLAG -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= #
 
 CC			= c++
-FLAGS		= -Werror -Wall -Wextra -std=c++98 -Wshadow -pedantic -g#-fsanitize=address -fsanitize=leak
+FLAGS		= -Werror -Wall -Wextra -std=c++98 -Wshadow -pedantic -g -Wconversion#-fsanitize=address -fsanitize=leak
 
 RM			= rm -fr
 
@@ -39,5 +39,8 @@ fclean: clean
 	@$(RM) $(NAME)
 
 re: fclean all
+
+check: $(NAME)
+	@$(CC) $(FLAGS) -fsyntax-only $(SRC)
 
 .PHONY: all clean fclean re

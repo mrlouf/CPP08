@@ -6,9 +6,11 @@
 /*   By: nponchon <nponchon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 17:35:36 by nponchon          #+#    #+#             */
-/*   Updated: 2025/03/18 17:36:52 by nponchon         ###   ########.fr       */
+/*   Updated: 2025/03/18 17:50:36 by nponchon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "MutantStack.hpp"
 
 int	main()
 {

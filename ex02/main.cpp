@@ -6,7 +6,7 @@
 /*   By: nponchon <nponchon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 17:35:36 by nponchon          #+#    #+#             */
-/*   Updated: 2025/03/19 11:54:50 by nponchon         ###   ########.fr       */
+/*   Updated: 2025/03/19 12:15:44 by nponchon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,8 +64,7 @@ int	main()
 		}
 	}
 	{
-		std::cout << std::endl
-				  << "\033[31mTest with vectors\033[0m" << std::endl;
+		std::cout << std::endl << "\033[31mTest with vectors\033[0m" << std::endl;
 		std::vector<int> vec;
 		vec.push_back(5);
 		vec.push_back(17);

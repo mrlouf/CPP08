@@ -12,9 +12,7 @@ RM			= rm -fr
 
 # -=-=-=-=-    FILES -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
 
-SRC 		= 	main.cpp		\
-				MutantStack.cpp	\
-				MutantStack.tpp
+SRC 		= 	main.cpp
 
 HEADERS		=	MutantStack.hpp
 

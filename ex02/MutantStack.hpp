@@ -6,7 +6,7 @@
 /*   By: nponchon <nponchon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 17:39:02 by nponchon          #+#    #+#             */
-/*   Updated: 2025/03/19 10:52:01 by nponchon         ###   ########.fr       */
+/*   Updated: 2025/03/19 11:45:19 by nponchon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class MutantStack : public std::stack<T, std::deque<T> >
 		typedef typename std::deque<T>::reverse_iterator reverse_iterator;
 		typedef typename std::deque<T>::const_reverse_iterator const_reverse_iterator;
 
-		// Coplien's gugus
+		// Coplien's dingsbums
         MutantStack() : std::stack<T, std::deque<T> >() {}
         MutantStack(const MutantStack &other) : std::stack<T, std::deque<T> >(other) {}
         ~MutantStack() {}

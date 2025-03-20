@@ -6,7 +6,7 @@
 /*   By: nponchon <nponchon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 17:34:13 by nponchon          #+#    #+#             */
-/*   Updated: 2025/03/18 12:37:35 by nponchon         ###   ########.fr       */
+/*   Updated: 2025/03/20 09:46:10 by nponchon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,15 +39,15 @@ int	main()
 		std::cout << std::endl << "\033[31mTest element found in deque\033[0m" << std::endl;
 
 		std::deque<int> d;
-		d.push_back(0);
-		d.push_back(1);
-		d.push_back(2);
-		d.push_back(3);
-		d.push_back(4);
+		d.push_back(10);
+		d.push_back(11);
+		d.push_back(12);
+		d.push_back(13);
+		d.push_back(14);
 
 		try {
 			std::cout << std::boolalpha << d.empty() << std::endl;
-			std::cout << *easyfind(d, 3) << std::endl;
+			std::cout << *easyfind(d, 13) << std::endl;
 		}
 		catch (const std::exception &e) {
 			std::cout << "Caught exception: " << e.what() << std::endl;

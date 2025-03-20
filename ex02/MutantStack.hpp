@@ -6,7 +6,7 @@
 /*   By: nponchon <nponchon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 17:39:02 by nponchon          #+#    #+#             */
-/*   Updated: 2025/03/19 11:45:19 by nponchon         ###   ########.fr       */
+/*   Updated: 2025/03/20 09:40:36 by nponchon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,7 @@ class MutantStack : public std::stack<T, std::deque<T> >
         MutantStack &operator=(const MutantStack &other)
         {
             if (this != &other)
-            {
                 std::stack<T, std::deque<T> >::operator=(other);
-            }
             return *this;
         }
 

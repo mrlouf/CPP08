@@ -6,7 +6,7 @@
 /*   By: nponchon <nponchon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 17:34:13 by nponchon          #+#    #+#             */
-/*   Updated: 2025/03/20 09:46:10 by nponchon         ###   ########.fr       */
+/*   Updated: 2025/03/23 12:45:55 by nponchon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <vector>
 # include <deque>
+# include <stack>
 
 int	main()
 {
@@ -107,6 +108,27 @@ int	main()
 		try {
 			std::cout << std::boolalpha << v.empty() << std::endl;
 			std::cout << easyfind(v, 10.42f) << std::endl; // Impossible to compile with flag -Wconversion
+		}
+		catch (const std::exception &e) {
+			std::cout << "Caught exception: " << e.what() << std::endl;
+		}
+	}
+*/
+
+/*		Cannot use stack since they lack iterators
+	{
+		std::cout << std::endl << "\033[31mTest stack container\033[0m" << std::endl;
+		std::stack<int> v;
+
+		v.push_back(0);
+		v.push_back(1);
+		v.push_back(2);
+		v.push_back(3);
+		v.push_back(4);
+		
+		try {
+			std::cout << std::boolalpha << v.empty() << std::endl;
+			std::cout << easyfind(v, 1) << std::endl;
 		}
 		catch (const std::exception &e) {
 			std::cout << "Caught exception: " << e.what() << std::endl;
